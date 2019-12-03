@@ -1,7 +1,7 @@
 readENVI.m是测试函数
 
 测试环境：
-Win10  matlabR2018a
+Win10  matlabR2019a
 
 1.0：20190305
 基本实现使用matlab读取ENVI标准格式的影像文件；
@@ -25,3 +25,6 @@ Win10  matlabR2018a
 
 1.6：20190511
 支持tif图像格式（无.hdr头文件的数据读取，不完善）
+
+1.7：20191203
+支持hdr文件中无header_offset

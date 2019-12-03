@@ -104,6 +104,10 @@ if iscx
 end
 
 fid=fopen(datafile,'w');
+
+if ~isfield(info, 'header_offset')
+    info.header_offset = 0;
+end
 fwrite(fid,zeros(info.header_offset,1),'uint8',0,machine); %here we write a dummy header in order to respect the offset
 fwrite(fid,D,format,0,machine); %alternatively, multibandwrite (matlab function) might be used
 fclose(fid);
